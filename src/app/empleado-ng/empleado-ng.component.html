@@ -1,0 +1,19 @@
+<br>
+<p>Nombre del empleado: {{nombre}}</p>
+    <p>Apellido del empleado: {{apellido.value}}</p>
+    Introduce tu apellido: <input type="text" #apellido>
+    <input type="button" value="Dale!" (click)="llamaApellido(apellido.value)"/>
+    <br/>
+<p>Edad del empleado: {{edad<18 ? " Menor de edad": 90}}</p>
+    <br/>
+<p>Ciudad de orgien:{{ciudadOrigen}} </p>
+    Indique la ciudad de orgien: <input type="tex" [(ngModel)]="ciudadOrigen">
+    <br/>
+<p>Empresa del empleado: {{empresa.value}}</p>
+    Introduce la empresa: <input type="tex" #empresa (keyup)="0" [disabled]="habilitarCuadro">
+    <br/>
+    <br/>
+{{textoDeRegistro}}<br/>
+Registrado: <input type="radio" value="si" name="nRegistro" id="registro" [checked]="usuarioRegistrado" (click)="setUsuarioRegistrado($event)"/>
+No Registrado: <input type="radio" value="no" name="nRegistro" id="registro" [checked]="usuarioRegistrado" (click)="setUsuarioRegistrado($event)"/>
+{{getRegistroUsuario()}}
